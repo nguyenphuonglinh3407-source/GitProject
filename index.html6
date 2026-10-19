@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-section {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .desc {
+            font-size: 14px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .question-label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 50%;
+            padding: 6px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+        .radio-group, .checkbox-group {
+            font-size: 14px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .other-input {
+            margin-left: 5px;
+            border: 1px solid #ccc;
+            padding: 4px;
+            width: 150px;
+        }
+        .price-group {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .price-box {
+            display: flex;
+            flex-direction: column;
+            margin: 0 5px;
+        }
+        .price-box input {
+            width: 60px;
+            padding: 4px;
+            border: 1px solid #ccc;
+        }
+        .price-box span {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+        }
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 100px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+        .submit-btn {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Market Research Survey</h1>
+        <div class="desc">Please take a few moments to complete this satisfaction survey.</div>
+    </div>
+
+    <form action="#" method="POST">
+        
+        <div class="form-group">
+            <label class="question-label">What is your age range?</label>
+            <select name="age_range">
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-49">35-49</option>
+                <option value="50+">50+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="question-label">What is your yearly income range?</label>
+            <select name="income_range">
+                <option value="0-25000">$0 - $25,000</option>
+                <option value="25001-50000">$25,001 - $50,000</option>
+                <option value="50001-100000">$50,001 - $100,000</option>
+                <option value="100000+">$100,000+</option>
+            </select>
+        </div>
+
+        <div class="form-group radio-group">
+            <label class="question-label">Gender Identity</label>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Nonbinary"> Nonbinary</label>
+            <label><input type="radio" name="gender" value="Other"> Other <input type="text" class="other-input" name="gender_other"></label>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label class="question-label">Which of the following products have your purchased in the last 2 months. Please check all that apply.</label>
+            <label><input type="checkbox" name="products" value="Product 1"> Product 1</label>
+            <label><input type="checkbox" name="products" value="Product 2"> Product 2</label>
+            <label><input type="checkbox" name="products" value="Product 3"> Product 3</label>
+        </div>
+
+        <div class="form-group radio-group">
+            <label class="question-label">How often would you use our new product?</label>
+            <label><input type="radio" name="usage_frequency" value="Daily"> Daily</label>
+            <label><input type="radio" name="usage_frequency" value="Weekly"> Weekly</label>
+            <label><input type="radio" name="usage_frequency" value="Monthly"> Monthly</label>
+        </div>
+
+        <div class="form-group">
+            <label class="question-label">What would you pay for the new product?</label>
+            <div class="price-group">
+                $ 
+                <div class="price-box">
+                    <input type="text" name="dollars">
+                    <span>Dollars</span>
+                </div>
+                .
+                <div class="price-box">
+                    <input type="text" name="cents" maxlength="2">
+                    <span>Cents</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="question-label">What features would you like to see in the new product.</label>
+            <textarea name="features"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+</body>
+</html>
